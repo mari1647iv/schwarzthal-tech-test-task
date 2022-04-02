@@ -15,3 +15,19 @@ export interface SearchItem {
   trackViewUrl?: string,
   wrapperType: string,
 };
+
+export interface AlbumInterface {
+  wrapperType: string,
+  collectionType: string,
+  artistId: number,
+  collectionId: number,
+  artistName: string,
+  collectionName: string,
+  collectionCensoredName: string,
+  artistViewUrl: string,
+  collectionViewUrl: string,
+  artworkUrl60: string,
+  artworkUrl100: string,
+  trackCount: number,
+  releaseDate: string,
+}
