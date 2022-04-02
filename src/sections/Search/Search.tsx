@@ -1,7 +1,7 @@
 import "./Search.css";
 import React, { useState } from 'react';
 import itunesService from '../../services/itunesService';
-import { SearchItem } from '../../types';
+import { SearchItem } from '../../types/types';
 import Section from '../../components/Section/Section';
 import SearchItemBlock from "../../components/SearchItem/SearchItemBlock";
 
@@ -25,7 +25,7 @@ function Search() {
         <button type="submit" onClick={() => search(searchEntry)}>Search</button>
         <div>
           {results?.map((result) => (
-            <SearchItemBlock item={result} />
+            <SearchItemBlock key={result.trackId} item={result} />
           ))}
         </div>
       </div>
